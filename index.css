@@ -1,73 +1,147 @@
-/* Basic page styles */
+/* ---- Colour + type system ---- */
+:root {
+  --brand: #2563eb;
+  --brand-dark: #1d4ed8;
+  --ink: #1a1a1a;
+  --bg: #ffffff;
+  --surface: #f8fafc;
+  --muted: #6b7280;
+  --line: #e5e7eb;
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
 body {
-  background-color: white;
-  color: black;
-  font-family: Arial, sans-serif;
-  margin: 20px;
+  margin: 0;
+  font-family: var(--font);
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.6;
 }
 
-/* Header and Navigation */
-header {
-  text-align: center;
-  border-bottom: 2px solid black;
-  padding-bottom: 15px;
-  margin-bottom: 20px;
+/* Flexible images — nothing overflows on mobile */
+img { max-width: 100%; height: auto; }
+
+a { color: var(--brand); }
+
+h1, h2, h3 { line-height: 1.2; }
+
+/* ---- Header: Flexbox row ---- */
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--line);
 }
 
-header h1 {
-  margin-bottom: 10px;
+.logo {
+  margin: 0;
+  font-size: 1.25rem;
+  color: var(--brand);
 }
 
-nav a {
-  color: blue;
+.site-header nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.site-header nav a {
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 500;
+  color: var(--ink);
 }
 
-nav a {
-  text-decoration: underline;
+.site-header nav a:hover { color: var(--brand); }
+
+/* ---- Sections ---- */
+main { max-width: 1000px; margin: 0 auto; padding: 0 1.5rem; }
+
+section { padding: 3rem 0; }
+
+section h2 {
+  font-size: 1.75rem;
+  margin: 0 0 1rem;
+  color: var(--ink);
 }
 
-/* Sections and Titles */
-section {
-  margin-bottom: 30px;
+.lead { color: var(--muted); max-width: 60ch; font-size: 1.05rem; }
+
+/* ---- Projects: CSS Grid (1 column on mobile) ---- */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
 }
 
-h2 {
-  color: darkblue;
-  border-bottom: 1px solid gray;
-  padding-bottom: 5px;
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: transform .15s ease, box-shadow .15s ease;
 }
 
-/* Project Cards */
-.project-card {
-  border: 1px solid gray;
-  padding: 15px;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  background-color: lightgray;
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .08);
 }
 
-.project-card h3 {
-  margin-top: 0;
+.card h3 { margin: 0 0 .5rem; font-size: 1.15rem; }
+
+.card p { margin: 0 0 1rem; color: var(--muted); font-size: .95rem; }
+
+.card-link {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--brand);
 }
 
-.project-card a {
-  color: blue;
-  font-weight: bold;
+.card-link:hover { color: var(--brand-dark); }
+
+/* ---- Footer ---- */
+#contact {
+  background: var(--surface);
+  border-top: 1px solid var(--line);
+  padding: 3rem 1.5rem;
+  text-align: center;
 }
 
-/* Footer & Contact */
-footer {
-  border-top: 2px solid black;
-  padding-top: 15px;
-  margin-top: 30px;
+#contact p { color: var(--muted); }
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
 }
 
-footer p {
-  margin: 8px 0;
+.contact-links a {
+  text-decoration: none;
+  font-weight: 500;
+  padding: .6rem 1.2rem;
+  border: 1px solid var(--brand);
+  border-radius: 8px;
 }
 
-footer a {
-  color: blue;
+.contact-links a:hover {
+  background: var(--brand);
+  color: #fff;
+}
+
+.copyright { font-size: .85rem; }
+
+/* ---- Responsive breakpoints ---- */
+@media (min-width: 700px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+  section { padding: 4rem 0; }
+}
+
+@media (min-width: 1000px) {
+  .grid { grid-template-columns: repeat(3, 1fr); }
 }
