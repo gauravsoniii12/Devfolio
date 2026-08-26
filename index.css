@@ -1,0 +1,73 @@
+/* Basic page styles */
+body {
+  background-color: white;
+  color: black;
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+/* Header and Navigation */
+header {
+  text-align: center;
+  border-bottom: 2px solid black;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  margin-bottom: 10px;
+}
+
+nav a {
+  color: blue;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a {
+  text-decoration: underline;
+}
+
+/* Sections and Titles */
+section {
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: darkblue;
+  border-bottom: 1px solid gray;
+  padding-bottom: 5px;
+}
+
+/* Project Cards */
+.project-card {
+  border: 1px solid gray;
+  padding: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: lightgray;
+}
+
+.project-card h3 {
+  margin-top: 0;
+}
+
+.project-card a {
+  color: blue;
+  font-weight: bold;
+}
+
+/* Footer & Contact */
+footer {
+  border-top: 2px solid black;
+  padding-top: 15px;
+  margin-top: 30px;
+}
+
+footer p {
+  margin: 8px 0;
+}
+
+footer a {
+  color: blue;
+}
