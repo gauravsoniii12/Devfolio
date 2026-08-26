@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <title>gaurav | Developer Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aditya Kaushal Pancholi — Developer Portfolio</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>gaurav</h1>
+
+  <header class="site-header">
+    <h1 class="logo">Aditya Kaushal Pancholi</h1>
     <nav>
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
@@ -18,37 +20,51 @@
 
   <main>
     <section id="about">
-      <h2>About Me</h2>
-      <p>First-year Computer Science student passionate about building clean, responsive web applications. Currently honing my skills in front-end development.</p>
+      <h2>About</h2>
+      <p class="lead">
+        I'm a frontend web development student learning to build for the web from
+        the ground up — semantic HTML, CSS layout with Flexbox and Grid, and
+        responsive design. I'm currently working through the Kalvium Frontend Web
+        Development course, and this site is where I collect what I build.
+      </p>
     </section>
 
     <section id="projects">
       <h2>Projects</h2>
-      <div class="projects-grid">
-        <article class="project-card">
-          <h3>Weather App</h3>
-          <p>A responsive application that displays real-time weather data using a modern layout.</p>
-          <a href="#" target="_blank" rel="noopener">View Project</a>
+      <div class="grid">
+
+        <article class="card">
+          <h3>linux-lab</h3>
+          <p>A hands-on collection of Linux command-line exercises and shell notes from my terminal practice.</p>
+          <a class="card-link" href="https://github.com/adityakaushalpancholi/linux-lab">View project &rarr;</a>
         </article>
 
-        <article class="project-card">
-          <h3>Quiz Game</h3>
-          <p>An interactive quiz application built with structured semantic HTML and custom styling.</p>
-          <a href="#" target="_blank" rel="noopener">View Project</a>
+        <article class="card">
+          <h3>DevFolio</h3>
+          <p>This portfolio — a responsive single-page site built with semantic HTML, CSS variables, Flexbox and Grid.</p>
+          <a class="card-link" href="https://github.com/adityakaushalpancholi/Devfolio">View project &rarr;</a>
         </article>
+
+        <article class="card">
+          <h3>HTML &amp; CSS Practice</h3>
+          <p>Small layout exercises from Modules 1 and 2: semantic structure, colour systems, Flexbox and media queries.</p>
+          <a class="card-link" href="https://github.com/adityakaushalpancholi">View project &rarr;</a>
+        </article>
+
       </div>
     </section>
   </main>
 
   <footer id="contact">
     <h2>Contact</h2>
-    <p>Feel free to reach out to discuss work or collaborations!</p>
+    <p>Happy to hear about projects, internships, or anything I could learn from.</p>
     <div class="contact-links">
-      <a href="mailto:jangidshivam144@gmail.com">Email Me</a>
-      <a href="tel:+919468981670">Call (+91 95097 64686)</a>
-      <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:aditya2007aaditya@gmail.com">Email</a>
+      <a href="https://github.com/adityakaushalpancholi">GitHub</a>
+      <a href="https://www.linkedin.com/in/adityakaushalpancholi/">LinkedIn</a>
     </div>
+    <p class="copyright">&copy; 2026 Aditya Kaushal Pancholi</p>
   </footer>
+
 </body>
 </html>
